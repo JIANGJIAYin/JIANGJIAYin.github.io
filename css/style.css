@@ -9,6 +9,9 @@
 a{
 	text-decoration: none;
 }
+a:hover{
+	text-decoration: none;
+}
 /*iphone6部分*/
 /*头部有色块*/
 header{
@@ -33,6 +36,7 @@ header .btn{
 	font-size: 24px;
 	color: #B2C5CC;
 	cursor:pointer;
+	margin-top: 18px;
 }
 /*ul列表移出头部，隐藏起来*/
 .list{
@@ -108,8 +112,14 @@ section:nth-child(1) .container .start button:hover{
 	transition-duration: .5s;
 	background-color: rgb(255, 255, 255);
 }
+
+
+
+
+
+
 /*平分页面宽度的文字部分*/
-section:nth-child(2) .title{
+section:nth-child(3) .title{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
@@ -117,12 +127,12 @@ section:nth-child(2) .title{
 	width: 100%;
 	border-bottom: 1px solid #ccc;
 }
-section:nth-child(2) .title>li{
+section:nth-child(3) .title>li{
 	font-size: 12px;
 	width: 23%;
 	text-align: center;
 }
-section:nth-child(2) .title>li>a{
+section:nth-child(3) .title>li>a{
 	color: #bababa;
 }
 /*鼠标滑过来链接文字时,文字颜色过渡变化*/
@@ -133,25 +143,25 @@ section:nth-child(2) .title>li>a.active,section:nth-child(2) .title>li>a:hover{
 	color: #545454;
 }
 /*有标题和段落文字的部分*/
-section:nth-child(2) .paragraph{
+section:nth-child(3) .paragraph{
 	width: 55%;
 	margin: 70px auto;
 }
 /*标题*/
-section:nth-child(2) .paragraph h2{
+section:nth-child(3) .paragraph h2{
 	margin-bottom: 20px;
 	text-align: center;
 	line-height: 36px;
 }
 /*段落*/
-section:nth-child(2) .paragraph p{
+section:nth-child(3) .paragraph p{
 	text-align: left;
 	color: #bbb;
 	font-size: 12px;
 	line-height: 2.0em;
 }
 /*上边是文字,下边是慕课网链接的部分*/
-section:nth-child(2) .foot{
+section:nth-child(3) .foot{
 	text-align: center;
 	height: 100px;
 	width: 100%;
@@ -160,22 +170,22 @@ section:nth-child(2) .foot{
 	margin-bottom: 40px;
 }
 /*虽然写的是.left,但这个是上部*/
-section:nth-child(2) .foot .left{
+section:nth-child(3) .foot .left{
 	height: 40px;
 	line-height: 40px;
 	font-size: 20px;
 	padding-top: 10px;
 }
 /*虽然写的是.right,但这个是下部*/
-section:nth-child(2) .foot .right{
+section:nth-child(3) .foot .right{
 	height: 40px;
 	line-height: 40px;
 }
 /*下部的左侧和右侧文字颜色样式*/
-section:nth-child(2) .foot .right .right_first{
+section:nth-child(3) .foot .right .right_first{
 	color: #bababa;
 }
-section:nth-child(2) .foot .right .right_second a{
+section:nth-child(3) .foot .right .right_second a{
 	color: #000;
 }
 /*图片区域*/
@@ -216,6 +226,180 @@ footer{
 	line-height: 80px;
 	font-size: 12px;
 }
+
+.layer{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	z-index: 99999;
+	position:fixed;
+	top: 0;
+	left: 0;
+	display:none;
+}
+.layer-mask{
+	width: 85%;
+	height: 300px;
+	background-color: #b3c6cd;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+	z-index: 100000;
+	opacity: 0.9;
+	display: none;
+}
+.layer-mask .close{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	float: right;
+	/*border:1px solid #fff;*/
+	text-align: center;
+	margin-top: -15px;
+	margin-right: -15px;
+	background-color: #b3c6cd;
+	color: #fff;
+	opacity: 0.5;
+}
+.layer-mask .close:hover{
+	transition-property: background-color,color;
+	transition-timing-function: ease-in-out;
+	transition-duration: .3s;
+	cursor: pointer;
+	background-color: #afafaf;
+	color: #b3c6cd;
+}
+.inp{
+	/*background-color: red;*/
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 250px;
+	margin: 20px auto;
+	align-items: space-between;
+	justify-content: space-around;
+	padding: 30px;
+}
+.inp .input-group-addon{
+	border-radius: 5px 0 0 5px;
+}
+
+.inp>#submit{
+	background-color: #eee;
+	height: 35px;
+	border: 0px;
+	border-radius: 5px;
+}
+.inp>#submit:hover{
+	border:1px solid #afafaf;
+	background-color: #afafaf;
+	border-radius: 5px;
+	color: #b3c6cd;
+}
+
+
+.slide-banner{
+		width: 100%;
+		height: 320px;
+		background-color: #b3c6cd;
+	}
+	.slide-banner .main{
+		width: 100%;
+		height: 260px;
+		/*padding: 10px;*/
+		background-color: #bbb;
+		margin:0px auto;
+		position: relative;
+		/*overflow: hidden;*/
+	}
+	.slide-banner .banner{
+		width: 100%;
+		height: 260px;
+		margin:0px auto;
+		/*overflow: hidden;	*/
+		position: relative;
+		
+	}
+	.slide-banner .slider{
+		width: 100%;
+		height: 260px;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		position: absolute;
+		display: none;
+
+	}
+	.slide-banner .now{
+		display: block;
+	}
+	.slide-banner .slider1{
+		background-image: url('../images/1.jpg');
+		background-size: 100% 100%;
+	}
+	.slide-banner .slider2{
+		background-image: url('../images/2.jpg');
+		background-size: 100% 100%;
+	}
+	.slide-banner .slider3{
+		background-image: url('../images/3.jpg');
+		background-size: 100% 100%;
+	}
+	.slide-banner .slider4{
+		background-image: url('../images/4.jpg');
+		background-size: 100% 100%;
+	}
+	.slide-banner .slider5{
+		background-image: url('../images/5.jpg');
+		background-size: 100% 100%;
+	}
+
+	.slide-banner .button{
+		width: 44px;
+		height: 88px;
+		position: absolute;
+		margin-top: -22px;
+		top: 100px;
+	}
+	.slide-banner .next{
+		right: 10px;
+		left: auto;
+		background:url('../images/pre.png') no-repeat center;
+	}
+	.slide-banner .prev{
+		background: url('../images/pre2.png') no-repeat center;
+		left: 10px;
+		right: auto;
+	}
+	.slide-banner .button:hover{
+		background-color: rgba(7,17,27,0.6);
+		cursor: pointer;
+	}
+	.slide-banner .dots{
+		position: absolute;
+		right: 20px;
+		bottom: 15px;
+	}
+	.slide-banner .dots span{
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: rgba(7,17,27,0.8);
+		display: inline-block;
+		margin-right: 5px;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;
+		cursor: pointer;
+	}
+	.slide-banner .dots span.point{
+		box-shadow: 0 0 0 2px rgba(7,17,27,0.7) inset;
+		background-color: #FFF;
+
+	}
+
 /*iPad部分*/
 @media screen and (min-width: 768px){
 	/*隐藏头部及右侧按钮*/
@@ -247,7 +431,7 @@ footer{
 	/*对logo,按钮部分做一些调整*/
 	section:nth-child(1) .container{
 		padding-top: 30px;
-		padding-bottom: 80px;
+		/*padding-bottom: 80px;*/
 	}
 	section:nth-child(1) .container .logo{
 		top: 0px;
@@ -309,4 +493,171 @@ footer{
 	footer{
 		font-size: 16px;
 	}
+	.layer{
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: 0.5;
+		z-index: 99999;
+		position:fixed;
+		top: 0;
+		left: 0;
+		display:none;
+	}
+	.layer-mask{
+		width: 500px;
+		height: 300px;
+		background-color: #b3c6cd;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin:auto;
+		z-index: 100000;
+		opacity: 0.9;
+		display: none;
+	}
+	.layer-mask .close{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		border-radius: 50%;
+		float: right;
+		/*border:1px solid #fff;*/
+		text-align: center;
+		margin-top: -15px;
+		margin-right: -15px;
+		background-color: #b3c6cd;
+		color: #fff;
+		opacity: 0.5;
+	}
+	.layer-mask .close:hover{
+		transition-property: background-color,color;
+		transition-timing-function: ease-in-out;
+		transition-duration: .3s;
+		cursor: pointer;
+		background-color: #afafaf;
+		color: #b3c6cd;
+	}
+	.inp{
+		/*background-color: red;*/
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		height: 250px;
+		margin: 20px auto;
+		align-items: space-between;
+		justify-content: space-around;
+		padding: 30px;
+	}
+	.inp .input-group-addon{
+		border-radius: 5px 0 0 5px;
+	}
+
+	.inp>#submit{
+		background-color: #eee;
+		height: 35px;
+		border: 0px;
+		border-radius: 5px;
+	}
+	.inp>#submit:hover{
+		border:1px solid #afafaf;
+		background-color: #afafaf;
+		border-radius: 5px;
+		color: #b3c6cd;
+	}
+	.slide-banner{
+		width: 100%;
+		height: 520px;
+		background-color: #b3c6cd;
+	}
+	.slide-banner .main{
+		width: 1200px;
+		height: 460px;
+		/*padding: 10px;*/
+		background-color: #bbb;
+		margin:0px auto;
+		position: relative;
+		/*overflow: hidden;*/
+	}
+	.slide-banner .banner{
+		width: 1200px;
+		height: 460px;
+		margin:0px auto;
+		/*overflow: hidden;	*/
+		position: relative;
+		
+	}
+	.slide-banner .slider{
+		width: 1200px;
+		height: 460px;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		position: absolute;
+		display: none;
+
+	}
+	.slide-banner .now{
+		display: block;
+	}
+	.slide-banner .slider1{
+		background-image: url('../images/1.jpg');
+		background-size: 100% 100%;
+	}
+	.slide-banner .slider2{
+		background-image: url('../images/2.jpg');
+	}
+	.slide-banner .slider3{
+		background-image: url('../images/3.jpg');
+	}
+	.slide-banner .slider4{
+		background-image: url('../images/4.jpg');
+	}
+	.slide-banner .slider5{
+		background-image: url('../images/5.jpg');
+	}
+
+	.slide-banner .button{
+		width: 44px;
+		height: 88px;
+		position: absolute;
+		margin-top: -20px;
+		top: 208px;
+	}
+	.slide-banner .next{
+		right: 10px;
+		left: auto;
+		background:url('../images/pre.png') no-repeat center;
+	}
+	.slide-banner .prev{
+		background: url('../images/pre2.png') no-repeat center;
+		left: 10px;
+		right: auto;
+	}
+	.slide-banner .button:hover{
+		background-color: rgba(7,17,27,0.6);
+		cursor: pointer;
+	}
+	.slide-banner .dots{
+		position: absolute;
+		right: 20px;
+		bottom: 15px;
+	}
+	.slide-banner .dots span{
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: rgba(7,17,27,0.8);
+		display: inline-block;
+		margin-right: 5px;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;
+		cursor: pointer;
+	}
+	.slide-banner .dots span.point{
+		box-shadow: 0 0 0 2px rgba(7,17,27,0.7) inset;
+		background-color: #FFF;
+
+	}
+
 }
