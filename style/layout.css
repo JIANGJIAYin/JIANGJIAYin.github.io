@@ -1,0 +1,83 @@
+*{
+	margin:0;
+	padding:0;
+}
+.top{
+	height: 30px;
+	background-color:#f6f5f4;
+}
+.wrap{
+	width: 1000px;
+	margin:0 auto;
+	position: relative;
+}
+.header{
+	height: 92px;
+	background-color:#fff;
+}
+.nav{
+	height: 36px;
+	background-color:#0cc3f2;
+	position: relative;
+}
+.nav-list{
+	position: absolute;
+	width: 190px;
+	height:459px;
+	background: #03a5f0;
+	top:0;
+	left: 0;
+	z-index: 0;
+}
+.banner{
+	height: 414px;
+	padding:10px 0 10px 190px;
+	width: 810px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.banner-slide{
+	height: 414px;
+	width: 544px;
+	background: #f2eaef;
+	float:left;
+	margin:0 8px;
+}
+.banner-search{
+	width: 248px;
+	height: 253px;
+	background:#fafaf9;
+	float:left;
+}
+.banner-help{
+	width: 248px;
+	height: 144px;
+	margin-top:12px;
+	float:left;
+	background:#fafaf9;
+}
+.content{
+	overflow: hidden;
+}
+.content-detail{
+	width: 740px;
+	height: 484px;
+	background: #fff;
+	float: left;
+	margin-right: 8px;
+}
+.content-news,
+.content-stop{
+	width: 248px;
+	height: 236px;
+	float:left;
+	background:#fff;
+}
+.content-stop{
+	margin-top: 12px;
+}
+.footer{
+	height: 119px;
+	background: #eee;
+	margin-top: 42px;
+}
