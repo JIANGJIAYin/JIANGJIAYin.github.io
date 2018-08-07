@@ -148,3 +148,22 @@
 .ui-block-list-focus{
 	display: block;
 }
+.ui-backTop{
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background: #bbb url(../img/icon-go-up.png) no-repeat center;
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+}
+.ui-backTop:hover{
+	background: #bbb;
+	line-height: 20px;
+	font-size: 14px;
+}
+.ui-backTop:hover:after{
+	content:'回到顶部';
+	color: #fff;
+}
