@@ -125,10 +125,32 @@ $(function(){
 			$('.ui-slide').removeClass('ui-banner-z-index');
 		})
 	}
+	
+	$.fn.UiBackTop=function(){
+		var ui=$(this);
+		var el=$('<a href="#2"></a>');
+		var scrollTop=0;
+		$(window).on('scroll',function(){
+			scrollTop=window.pageYOffset
+						|| document.documentElement.scrollTop
+						|| document.body.scrollTop 
+						|| 0;
+			if (scrollTop >= 400) {
+				ui.append(el);
+				el.show().addClass('ui-backTop');
+			} else {
+				el.hide();
+			}
+		})
+		el.on('click',function(){
+			document.documentElement.scrollTop = 0;
+		})
+	}
 
 	//分别调用各方法
 	$(".ui-search").UiSearch();
 	$('.ui-content').UiContent();
 	$('.ui-slide').UiSlide();
 	$('.ui-nav').UiNav();
+	$('body').UiBackTop();
 })
